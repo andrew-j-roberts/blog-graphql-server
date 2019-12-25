@@ -1,0 +1,19 @@
+# serverless.yml
+
+service: ajr-graphql-server
+provider:
+  name: aws
+  runtime: nodejs8.10
+  profile: personal # run command `aws configure --profile <profile-name>` to create a profile :)
+functions:
+  graphql:
+    handler: server.graphqlHandler
+    events:
+      - http:
+          path: graphql
+          method: post
+          cors: true
+      - http:
+          path: graphql
+          method: get
+          cors: true

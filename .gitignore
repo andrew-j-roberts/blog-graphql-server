@@ -1,0 +1,5 @@
+# NODE STUFF
+node_modules
+
+# SERVERLESS STUFF
+.serverless
